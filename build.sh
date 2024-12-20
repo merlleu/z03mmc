@@ -1,1 +1,1 @@
-cmake -B build -DSDK_PREFIX=$(pwd)/telink_zigbee_sdk/tl_zigbee_sdk -DTOOLCHAIN_PREFIX=$(pwd)/tc32 -DMANUFACTURER_CODE=0x1141 && cmake --build build --target z03mmc.zigbee
+cmake -B build -DSDK_PREFIX=$(pwd)/../telink_zigbee_sdk/tl_zigbee_sdk -DTOOLCHAIN_PREFIX=$(pwd)/../tc32 -DMANUFACTURER_CODE=0x1141 && cmake --build build --target z03mmc.zigbee

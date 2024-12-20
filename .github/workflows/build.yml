@@ -17,6 +17,11 @@ jobs:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Install sonar-scanner and build-wrapper
         uses: SonarSource/sonarcloud-github-c-cpp@v3
+      - run: |
+          cd ..
+          git clone https://github.com/devbis/tc32.git -b linux
+          git clone https://github.com/telink-semi/telink_zigbee_sdk.git -b V3.7.1.0 --depth 1
+          cd z03mmc
       - name: Run build-wrapper
         run: |
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} ./build.sh
